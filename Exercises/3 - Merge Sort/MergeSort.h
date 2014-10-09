@@ -38,12 +38,12 @@ void merge(int* arr, int sizeLeft, int size)
         {
             if (arr[left] > arr[right])
             {
-                temp.push(arr[right]);
+                temp.push_back(arr[right]);
                 right++;
             }
             else
             {
-                temp.push(arr[left]);
+                temp.push_back(arr[left]);
                 left++;
             }
         }
@@ -51,7 +51,7 @@ void merge(int* arr, int sizeLeft, int size)
         {
             while (left < sizeLeft)
             {
-                temp.push(arr[left]);
+                temp.push_back(arr[left]);
                 left++;
             }
         }
@@ -59,7 +59,7 @@ void merge(int* arr, int sizeLeft, int size)
         {
             while (right < size)
             {
-                temp.push(arr[right]);
+                temp.push_back(arr[right]);
                 right++;
             }
         }
