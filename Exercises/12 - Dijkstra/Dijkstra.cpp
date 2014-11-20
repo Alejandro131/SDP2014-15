@@ -12,7 +12,7 @@ void dijkstra(int source, const GraphWeighed& g, vector<int>& min_distance, vect
     previous.clear();
     previous.resize(n, -1);
 
-    set< pair<weight_t, vertex_t> > vertex_queue;
+    set< pair<int, int> > vertex_queue;
     vertex_queue.insert(make_pair(min_distance[source], source));
  
     while (!vertex_queue.empty()) 
