@@ -196,7 +196,7 @@ class SplayTree
 			return node;
 		}
 
-		Node** findSubtreeMaximum(Node** x)
+		Node** findSubtreeMaximum(Node** node)
 		{
 			if (*node)
 			{
