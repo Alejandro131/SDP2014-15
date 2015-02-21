@@ -30,14 +30,14 @@ void dijkstra(int source, const GraphWeighed& g, vector<int>& min_distance, vect
             int weight = neighbors[i].weight;
             int distance_through_u = dist + weight;
 
-		    if (distance_through_u < min_distance[v] && min_distance[v] != -1) 
-		    {
-		        vertex_queue.erase(make_pair(min_distance[v], v));
-	 
-		        min_distance[v] = distance_through_u;
-		        previous[v] = u;
-		        vertex_queue.insert(make_pair(min_distance[v], v));
-		    }
+	    if (distance_through_u < min_distance[v] || min_distance[v] != -1) 
+	    {
+	        vertex_queue.erase(make_pair(min_distance[v], v));
+ 
+	        min_distance[v] = distance_through_u;
+	        previous[v] = u;
+	        vertex_queue.insert(make_pair(min_distance[v], v));
+	    }
         }
     }
 }
